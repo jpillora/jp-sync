@@ -1,5 +1,5 @@
 {
   "name": "jp-sync",
   "version": "1.0.0",
-  "main": "jp-sync.js"
+  "main": "index.js"
 }

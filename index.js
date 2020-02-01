@@ -81,6 +81,7 @@ const loop = async function(doMap, concurrency, arr, fn) {
       }
       //if queue[i] is undefined, then job "i" is free
       //if queue[i] is true,      then job "i" is taken
+      //NOTE: node is single-threaded so this is fine :)
       if (queue[i]) {
         continue;
       }
@@ -385,7 +386,7 @@ exports.diff = async run => {
 };
 
 //timer is a high-resolution timer:
-//  let stop = timer()
+//  let stop = timer.start()
 //  let ms = stop();
 exports.timer = {
   start() {
